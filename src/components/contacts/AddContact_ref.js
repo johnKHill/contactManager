@@ -8,7 +8,7 @@ class AddContact extends Component {
     this.nameInput = React.createRef();
     this.emailInput = React.createRef();
     this.phoneInput = React.createRef();
-  }
+  };
   
   onSubmit = e => {
     e.preventDefault();
@@ -16,7 +16,7 @@ class AddContact extends Component {
       name: this.nameInput.current.value,
       email: this.emailInput.current.value,
       phone: this.phoneInput.current.value
-    }
+    };
     
     console.log(contact);
   };
@@ -25,7 +25,7 @@ class AddContact extends Component {
     name: 'Fred Smith',
     email: 'fred@yahoo.com',
     phone: '777-777-7777'
-  }
+  };
   
   render() {
     const { name, email, phone } = this.props;
