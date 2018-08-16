@@ -24,12 +24,11 @@ const TextInputGroup = ({
         value={value}
         onChange={onChange}
       />
-      { error && <div className="invalid-feedback">{error}</div> }
-      
-
+      { error && <div className="invalid-feedback">{error}</div> }  
     </div>
   );
 };
+
 TextInputGroup.prototypes = {
   label:       PropTypes.string.isRequired,
   name:        PropTypes.string.isRequired,
