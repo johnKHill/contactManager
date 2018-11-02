@@ -6,19 +6,22 @@ class Test extends Component {
     body: ''
   };
 
-  // // These are Component lifecycle methods. All the 'componentWill...' are being deprecated.
-  // // Focus on 'getDerivedStateFromProps' and 'getSnapshotBeforeUpdate'
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/posts/1')
-      .then(response => response.json())
-      .then(data => 
-        this.setState({ 
-          title: data.title, 
-          body: data.body 
+    .then(response => response.json())
+    .then(data => 
+      this.setState({ 
+        title: data.title, 
+        body: data.body 
       })
     );
   }
 
+
+  
+  // // These are Component lifecycle methods. All the 'componentWill...' are being deprecated.
+  // // Focus on 'getDerivedStateFromProps' and 'getSnapshotBeforeUpdate'
+  
   // componentWillMount() {
   //   console.log('componentWillMount...');   
   // }

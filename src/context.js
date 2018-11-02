@@ -18,7 +18,7 @@ const reducer = (state, action) => {
         contacts: [action.payload, 
         ...state.contacts]
       };
-
+      
     case 'UPDATE_CONTACT': 
     return {
       ...state,
@@ -41,7 +41,7 @@ export class Provider extends Component {
 
   async componentDidMount() {
     const res = await axios
-      .get('https://jsonplaceholder.typicode.com/users')
+      .get('https://jsonplaceholder.typicode.com/users');
     
       this.setState({
         contacts: res.data
